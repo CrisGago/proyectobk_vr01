@@ -68,6 +68,8 @@ mongoose
     console.log("Conexión exitosa a la base de datos");
     const server = app.listen(port, () => console.log(`Start server PORT http://localhost:${port}`));
 
+    const connection = mongoose.connect(process.env.MONGO_URL);
+
     // WebSocket
     const io = new Server(server);
     Sockets(io);
