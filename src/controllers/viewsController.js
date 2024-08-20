@@ -61,8 +61,8 @@ export const renderRegister = (req, res) => {
 export const getProducts = async (req, res) => {
   req.logger.info("getProducts: Solicitud recibida.");
   try {
-    const { page = 1, limit = 8, sort } = req.query;
-    //uso limit 8 solo por cuestiones esteticas para que funcione bien con mi frontEnd
+    const { page = 1, limit = 10, sort } = req.query;
+    
     const options = {
       page: Number(page),
       limit: Number(limit),

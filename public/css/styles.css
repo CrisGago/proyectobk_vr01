@@ -445,7 +445,7 @@ table tr:nth-child(2n + 1) {
   white-space: nowrap;
 }
 .hero {
-  background-image: url("/img/inicio.jpg");
+  background-image: url("https://github.com/CrisGago/proyectobk_vr01/blob/main/public/img/inicio.webp");
   background-size: cover;
   height: 300px;
   display: flex;
@@ -1003,10 +1003,10 @@ aside li h2 {
   right: 10px;
 }
 .category-list a.active {
-  font-weight: bold; /* Cambia la negrita del texto */
+  font-weight: bold; 
   color: #ffffff !important;
   background-color: #000 !important;
-  border-color: #000 !important; /* Agrega otros estilos según tu diseño */
+  border-color: #000 !important; 
   display: block;
 }
 

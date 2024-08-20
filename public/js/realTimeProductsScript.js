@@ -37,7 +37,7 @@ function createTableRow(product) {
     <td>${product.stock}</td>
     <td>${product.code}</td>
     <td><img src="${
-      product.thumbnails && product.thumbnails.length ? "img/" + product.thumbnails[0] : "img/"
+      product.thumbnails && product.thumbnails.length ? "img/" + product.thumbnails[0] : "img/noThumbnails.webp"
     }" alt="Thumbnail" class="thumbnail" style="width: 75px;"></td>
     <td><button class="btn btn-effect btn-dark btn-jif bg-black" onClick="deleteProduct('${product._id}', '${product.owner}')">Eliminar</button></td>
     <td>${product.owner}</td>

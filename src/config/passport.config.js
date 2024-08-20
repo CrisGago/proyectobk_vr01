@@ -49,7 +49,7 @@ const initializePassport = () => {
         try {
           let user = await userService.getUserByEmail(username);
           if (user) {
-            const errorMessage = "¡Registro fallido! El usuario ya existe en la base de datos\n Por favor, ingresá otro correo electrónico.";
+            const errorMessage = "El usuario ya existe\n ingresá otro correo electrónico.";
             return done(null, false, errorMessage);
           }
 
@@ -88,12 +88,12 @@ const initializePassport = () => {
 
           const user = await userService.getUserByEmail(username);
           if (!user) {
-            const errorMessage = "¡Inicio de sesión fallido! El usuario no existe\n Por favor, verifica tu correo electrónico e intenta nuevamente.";
+            const errorMessage = "El usuario no existe\n verifica tu correo electrónico e intenta nuevamente.";
             return done(null, false, errorMessage);
           }
 
           if (!isValidPassword(user, password)) {
-            const errorMessage = "¡Inicio de sesión fallido! La contraseña es incorrecta\n Por favor, verifica tu contraseña e intenta nuevamente.";
+            const errorMessage = "La contraseña es incorrecta\n verifica tu contraseña e intenta nuevamente.";
             return done(null, false, errorMessage);
           }
 
