@@ -1,3 +1,4 @@
+//src/utils/constantsUtil.js
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
