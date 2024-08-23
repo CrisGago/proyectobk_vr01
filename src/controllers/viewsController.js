@@ -19,7 +19,7 @@ export const renderHome = async (req, res) => {
     const products = await productService.getPaginateProducts({}, { limit: 5, lean: true });
     const totalQuantityInCart = calculateTotalQuantityInCart(req.user);
     res.render("home", {
-      title: "Backend / Final - Home",
+      title: "Inicio",
       style: "styles.css",
       products: products.docs,
       user: req.user,
@@ -37,7 +37,7 @@ export const renderHome = async (req, res) => {
 export const renderLogin = (req, res) => {
   req.logger.info("renderLogin: Solicitud recibida.");
   res.render("login", {
-    title: "Backend / Final - Login",
+    title: "Login",
     style: "styles.css",
     message: req.session.messages ?? "",
   });
@@ -50,7 +50,7 @@ export const renderLogin = (req, res) => {
 export const renderRegister = (req, res) => {
   req.logger.info("renderRegister: Solicitud recibida.");
   res.render("register", {
-    title: "Backend / Final - Registro",
+    title: "Registro",
     style: "styles.css",
     message: req.session.messages ?? "",
   });
@@ -103,7 +103,7 @@ export const getProducts = async (req, res) => {
     if (requestedPage > products.totalPages) {
       req.logger.warn("getProducts: La página solicitada no existe.");
       return res.render("error", {
-        title: "Backend / Final - Products",
+        title: "Products_",
         style: "styles.css",
         message: "La página solicitada no existe",
         redirect: "/products",
@@ -111,7 +111,7 @@ export const getProducts = async (req, res) => {
     }
 
     const response = {
-      title: "Backend / Final - Products",
+      title: "Products",
       style: "styles.css",
       payload: products.docs,
       totalPages: products.totalPages,
@@ -179,7 +179,7 @@ export const renderCart = async (req, res) => {
     );
     const totalQuantityInCart = calculateTotalQuantityInCart(req.user);
     res.render("cart", {
-      title: "Backend / Final - cart",
+      title: "Cart",
       style: "styles.css",
       payload: products,
       user: req.user,

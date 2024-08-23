@@ -37,7 +37,7 @@ function createTableRow(product) {
     <td>${product.stock}</td>
     <td>${product.code}</td>
     <td><img src="${
-      product.thumbnails && product.thumbnails.length ? "img/" + product.thumbnails[0] : "img/noThumbnails.webp"
+      product.thumbnails && product.thumbnails.length ? "/img/" + product.thumbnails[0] : "/img/noThumbnails.webp"
     }" alt="Thumbnail" class="thumbnail" style="width: 75px;"></td>
     <td><button class="btn btn-effect btn-dark btn-jif bg-black" onClick="deleteProduct('${product._id}', '${product.owner}')">Eliminar</button></td>
     <td>${product.owner}</td>
@@ -54,7 +54,7 @@ function deleteProduct(productId, productOwner) {
       duration: 3000,
       gravity: "top",
       position: "right",
-      style: {
+      styles: {
         background: "#d9534f",
       },
       stopOnFocus: true,
@@ -91,8 +91,8 @@ form.addEventListener("submit", async (event) => {
       duration: 3000,
       gravity: "top",
       position: "right",
-      avatar: "../img/inicio.jpg",
-      style: {
+      avatar: "/", 
+      styles: {
         background: "#96c93d",
       },
       stopOnFocus: true,
@@ -170,7 +170,7 @@ function confirmarEliminacionProducto(idProducto, userRole, userId) {
         gravity: "top",
         position: "right",
         avatar: "../img/inicio.jpg",
-        style: {
+        styles: {
           background: "#96c93d",
         },
         stopOnFocus: true,

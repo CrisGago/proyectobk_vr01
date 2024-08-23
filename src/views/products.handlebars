@@ -1,10 +1,11 @@
+{{!-- src/views/products.handñebars --}}
 <div class="mx-auto px-4">
   <div class="mx-auto my-2 text-center border-2 text-uppercase">
     <h1>Propiedades</h1>
   </div>
   <div class="containerProducts">
     <div class="sidebar">
-      <div class="/img/logo3d.jpg">Real Estate Agent</div>
+      {{!-- <div class="text-center">Real Estate Agent</div> --}}
       <form action="/products" method="GET">
         <input type="text" id="txtSearch" name="title" placeholder="Buscar producto..." />
       </form>
@@ -34,9 +35,9 @@
           <figure>
             <div class="image-container">
               {{#if thumbnails}}
-              <img class="card-img" src="img/{{thumbnails}}" alt="{{title}}" />
+              <img class="card-img" src="/img/{{thumbnails}}" alt="{{title}}" />
               {{else}}
-              <img class="card-img" src="img/{{thumbnails}}" alt="{{title}}" />
+              <img class="card-img" src="/img/logo3d.webp" alt="Imagen no disponible">
               {{/if}}
               <div class="mask"></div>
               <figcaption>
@@ -107,3 +108,12 @@ function initializeSortSelect() {
   }
 }
 </script>
+
+  <script src="https://kit.fontawesome.com/4e9044019f.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
